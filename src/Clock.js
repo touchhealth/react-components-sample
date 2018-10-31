@@ -1,0 +1,49 @@
+import React, { Component } from 'react';
+import Paper from './Paper';
+
+/**
+ * Clock - é uma componente, com estado interno
+ */
+export default class Clock extends Component {
+
+    timerHandle = null;
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: new Date()
+        }
+    }
+
+    /**
+     * Recalcula a hora atual
+     */
+    tick = () => {
+        this.setState({ date: new Date() });
+    } 
+
+    /**
+     * Quando a componente tiver sido desenhada
+     */
+    componentDidMount() {
+        this.timerHandle = setInterval(this.tick, 1000);
+        console.log('montando relogio ' + this.timerHandle);
+    }
+
+    /**
+     * Quando a componente sair da tela ela será desmontada
+     */
+    componentWillUnmount() {
+        console.log('desmontando relogio ' + this.timerHandle);
+        if (this.timerHandle != null) {
+            clearInterval(this.timerHandle);
+        }
+    }
+
+    render() {
+        const { date } = this.state;
+        return (
+            <Paper>{date.toLocaleTimeString()}</Paper>
+        );
+    }
+}
