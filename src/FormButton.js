@@ -21,11 +21,12 @@ export default class FormButton extends Component {
 
     render() {
         const {
-            children
+            children,
+            ...otherProps
         } = this.props;
 
         return (
-            <Button onClick={this.handleClick}>{children}</Button>
+            <Button onClick={this.handleClick} {...otherProps}>{children}</Button>
         );
     }
 

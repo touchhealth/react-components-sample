@@ -13,7 +13,7 @@ export default class Input extends Component {
          */
         name: PropTypes.string,
         /**
-         * Nome do campo
+         * Nome do campo, se for não nulo a componente de input é gerenciada
          */
         value: PropTypes.string,
         /**
@@ -31,11 +31,12 @@ export default class Input extends Component {
             type,
             name,
             value,
-            onChange
+            onChange,
+            ...otherProps
         } = this.props;
 
         return (
-            <input type={type} name={name} value={value} onChange={onChange}/>
+            <input type={type} name={name} value={value} onChange={onChange} {...otherProps} />
         );
     }
 

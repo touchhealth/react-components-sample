@@ -1,0 +1,12 @@
+.Tab .titleBarContainer {
+    padding: 5px;
+}
+
+.Tab .titleBarItem {
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+.Tab .contentContainer {
+    padding: 5px;
+}

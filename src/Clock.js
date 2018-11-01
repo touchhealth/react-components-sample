@@ -41,9 +41,10 @@ export default class Clock extends Component {
     }
 
     render() {
+        const { ...otherProps } = this.props;
         const { date } = this.state;
         return (
-            <Paper>{date.toLocaleTimeString()}</Paper>
+            <Paper {...otherProps}>{date.toLocaleTimeString()}</Paper>
         );
     }
 }

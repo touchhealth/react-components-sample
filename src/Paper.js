@@ -8,7 +8,8 @@ import { shadows } from './styles';
 function Paper(props) {
     const {
         children,
-        elevation
+        elevation,
+        ...otherProps
     } = props;
 
     if (elevation < 0 || elevation > 25) {
@@ -22,7 +23,7 @@ function Paper(props) {
     }
 
     return (
-        <div style={style}>            
+        <div style={style} {...otherProps}>
             {children}
         </div>
     );

@@ -1,24 +1,13 @@
+import './Tab.css';
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Paper from './Paper';
 
-const styles = {
-    titleBarContainer: {
-        padding: 5
-    },
-
-    titleBarItem: {
-        margin: '0px 10px',
-        display: 'inline-block'
-    },
-
-    contentContainer: {
-        padding: 5
-    }
-}
+console.log(Paper.propTypes);
 
 /**
- * Tab - é uma componente de layout, com estado interno
+ * Tab - é uma componente de layout de abas, e extende as propriedades de Paper
  */
 export default class Tab extends Component {
     static propTypes = {
@@ -29,7 +18,7 @@ export default class Tab extends Component {
         /**
          * Nós das abas filhas
          */
-        content: PropTypes.arrayOf(PropTypes.node)
+        content: PropTypes.arrayOf(PropTypes.node),
     }
 
     constructor(props) {
@@ -46,7 +35,8 @@ export default class Tab extends Component {
     render() {
         const {
             titles,
-            content
+            content,
+            ...otherProps
         } = this.props;
 
         const {
@@ -54,16 +44,16 @@ export default class Tab extends Component {
         } = this.state;
 
         let titlesBar = (
-            <div style={styles.titleBarContainer}>
-                {titles.map((title, idx) => <div style={styles.titleBarItem} onClick={this.selectTab.bind(this, idx)} >{title}</div>)}
+            <div className="titleBarContainer">
+                {titles.map((title, idx) => <div className="titleBarItem" onClick={this.selectTab.bind(this, idx)} >{title}</div>)}
             </div>
         )
 
         return (
-            <Paper>
+            <Paper className="Tab" {...otherProps}>
                 {titlesBar}
                 <hr/>
-                <div key={titles[tabSelectedIdx]} style={styles.contentContainer}>
+                <div key={titles[tabSelectedIdx]} className="contentContainer">
                     {content[tabSelectedIdx]}
                 </div>
             </Paper>

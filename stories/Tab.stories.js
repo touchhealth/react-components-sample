@@ -1,18 +1,26 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+
+import DocsContainer from './doc/DocsContainer';
+import UseCase from './doc/UseCase';
 
 import Tab from '../src/Tab';
+import docs from './_docs/Tab.json';
 
-storiesOf('Tab', module)
-    .add('Basico', () => {
-      let titles = ['Aba1', 'Aba2', 'Aba3'];
-      let content = [];
-      content.push(<div>Conteudo da Aba1</div>);
-      content.push(<div>Conteudo da Aba2</div>);
-      content.push(<div>Conteudo da Aba3</div>);
-      return (
-        <Tab titles={titles} content={content} />
-      );
-  });
+
+let titles = ['Aba1', 'Aba2', 'Aba3'];
+let content = [<div>Conteudo da Aba1</div>, <div>Conteudo da Aba2</div>, <div>Conteudo da Aba3</div>];
+
+storiesOf('Componentes', module)
+.add('Tab', () => 
+  <DocsContainer docs={docs}>
+    <UseCase title="Básico" description={`    
+    let titles = ['Aba1', 'Aba2', 'Aba3'];
+    let content = [<div>Conteudo da Aba1</div>, <div>Conteudo da Aba2</div>, <div>Conteudo da Aba3</div>];
+
+    <Tab titles={titles} content={content} />`}>
+      <Tab titles={titles} content={content} />
+    </UseCase>
+  </DocsContainer>
+);
