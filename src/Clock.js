@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Paper from './Paper';
 
 /**
- * Clock - é uma componente, com estado interno
+ * Clock - é uma componente, com estado interno e controle de ciclo de vida
  */
 export default class Clock extends Component {
 
@@ -27,14 +27,12 @@ export default class Clock extends Component {
      */
     componentDidMount() {
         this.timerHandle = setInterval(this.tick, 1000);
-        console.log('montando relogio ' + this.timerHandle);
     }
 
     /**
      * Quando a componente sair da tela ela será desmontada
      */
     componentWillUnmount() {
-        console.log('desmontando relogio ' + this.timerHandle);
         if (this.timerHandle != null) {
             clearInterval(this.timerHandle);
         }
