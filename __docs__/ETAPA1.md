@@ -1,6 +1,6 @@
 # Apresentação
 
-[Voltar](README.md)
+[Voltar](../README.md)
 
 ## 1. Setup do projeto
 

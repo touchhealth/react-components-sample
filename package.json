@@ -9,8 +9,10 @@
     "react-dom": "^16.6.0"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "color": "^3.1.0",
     "prop-types": "^15.6.2",
-    "bootstrap": "^3.3.7"
+    "react-jss": "^8.6.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",

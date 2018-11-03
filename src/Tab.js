@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Paper from './Paper';
 
-console.log(Paper.propTypes);
-
 /**
  * Tab - é uma componente de layout de abas, e extende as propriedades de Paper
  */
