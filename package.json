@@ -11,7 +11,9 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "color": "^3.1.0",
+    "material-ui": "^0.20.2",
     "prop-types": "^15.6.2",
+    "react-bootstrap": "^0.32.4",
     "react-jss": "^8.6.1"
   },
   "devDependencies": {
@@ -27,6 +29,7 @@
     "@storybook/addons": "^4.0.0",
     "@storybook/react": "^4.0.0",
     "babel-loader": "^8.0.4",
+    "fs-extra": "^7.0.0",
     "glob": "^7.1.3",
     "highlight.js": "^9.13.1",
     "marked": "^0.5.1",
@@ -37,7 +40,9 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
+    "prepare": "yarn run build && yarn run build:prepareTarget",
     "build": "babel src -d target -s --copy-files",
+    "build:prepareTarget": "node ./scripts/prepareTarget.js",
     "dev": "babel src -d target -s -w --copy-files",
     "build:docs": "node ./scripts/docgen.js",
     "storybook": "yarn run build:docs && start-storybook -p 6006",

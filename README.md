@@ -35,7 +35,8 @@
     * Bibliotecas de Referência
         * material-ui
         * react-bootstrap
-    * Imports concientes
     * Adaptando componentes de terceiros
+    * Imports conscientes
+    
 
 [Próximo](__docs__/ETAPA1.md)
