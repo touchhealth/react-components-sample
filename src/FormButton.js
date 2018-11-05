@@ -26,7 +26,7 @@ export default class FormButton extends Component {
         } = this.props;
 
         return (
-            <Button onClick={this.handleClick} {...otherProps}>{children}</Button>
+            <Button {...otherProps} onClick={this.handleClick}>{children}</Button>
         );
     }
 

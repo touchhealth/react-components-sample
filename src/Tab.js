@@ -43,7 +43,7 @@ export default class Tab extends Component {
 
         let titlesBar = (
             <div className="titleBarContainer">
-                {titles.map((title, idx) => <div className="titleBarItem" onClick={this.selectTab.bind(this, idx)} >{title}</div>)}
+                {titles.map((title, idx) => <div key={title} className="titleBarItem" onClick={this.selectTab.bind(this, idx)} >{title}</div>)}
             </div>
         )
 
