@@ -29,7 +29,7 @@ const styles = theme => ({
         backgroundColor: color('white').darken(0.05).hex(),
         '&:hover': {
             backgroundColor: theme.primaryColor,
-            color: color(theme.primaryColor).isDark ? 'white' : null
+            color: color(theme.primaryColor).isDark() ? 'white' : 'black'
         }
     },
 

@@ -91,3 +91,5 @@ import { Button as RBButton } from 'react-bootstrap';
 ~~~
 
 Quando possível devemos preferir importar as componentes de forma mais explícita (primeira opção). Quando usamos empacotadores como o `webpack`, ele irá fazer uma varredura de tudo que importamos para montar o pacote, e quando fazemos imports como no segundo caso, podemos acabar trazendo código que não usamos para o pacote, o que acaba deixando ele maior do que precisavamos.
+
+[Próximo](ETAPA6.md)

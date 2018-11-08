@@ -37,6 +37,8 @@
         * react-bootstrap
     * Adaptando componentes de terceiros
     * Imports conscientes
-    
+1. [Publicando sua biblioteca](__docs__/ETAPA6.md)
+    * Publicando no nexus
+    * Publicando "SNAPSHOT" para desenvolvimento local
 
 [Próximo](__docs__/ETAPA1.md)

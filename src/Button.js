@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 /**
  * Botão Simples
+ * ~~~javascript
+ * var a = b + c;
+ * ~~~
  */
 export default class Button extends Component {
 

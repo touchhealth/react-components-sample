@@ -28,7 +28,7 @@ const styles = {
         backgroundColor: color('white').darken(0.05).hex(),
         '&:hover': {
             backgroundColor: 'steelblue',
-            color: color('steelblue').isDark ? 'white' : null
+            color: color('steelblue').isDark() ? 'white' : null
         }
     },
 

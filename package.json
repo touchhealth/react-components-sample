@@ -1,5 +1,5 @@
 {
-  "name": "react-components",
+  "name": "@touchhealth/react-components-sample",
   "version": "1.0.0",
   "author": "kasten <kasten@touchtec.com.br>",
   "license": "MIT",
@@ -40,12 +40,18 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
-    "prepare": "yarn run build && yarn run build:prepareTarget",
-    "build": "babel src -d target -s --copy-files",
+    "prepare": "yarn build",
+    "clean": "rimraf target",
+    "cleanall": "rimraf target && rimraf node_modules",
+    "build": "yarn build:babel && yarn build:prepareTarget",
+    "build:babel": "babel src -d target -s --copy-files",
     "build:prepareTarget": "node ./scripts/prepareTarget.js",
     "dev": "babel src -d target -s -w --copy-files",
     "build:docs": "node ./scripts/docgen.js",
     "storybook": "yarn run build:docs && start-storybook -p 6006",
-    "build-storybook": "yarn run build:docs && build-storybook"
+    "build-storybook": "yarn run build:docs && build-storybook"    
+  },
+  "publishConfig": {
+    "registry": "http://nexus.touchtec.com.br/content/repositories/npm-internal/"
   }
 }

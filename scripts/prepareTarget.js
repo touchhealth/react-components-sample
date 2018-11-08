@@ -1,6 +1,7 @@
 const path = require('path');
 const fse = require('fs-extra');
 
+// Arquivos extra que devem ser copiados para o diretório target
 const files = [
   'README.md'
 ];
@@ -29,6 +30,7 @@ function resolveBuildPath(file) {
   return path.resolve(__dirname, '../target/', path.basename(file));
 }
 
+// Cria o arquivo package.json sem das dependencias de dev que não são mais necessárias
 function createPackageFile() {
   return new Promise((resolve) => {
     fse.readFile(path.resolve(__dirname, '../package.json'), 'utf8', (err, data) => {
@@ -41,6 +43,7 @@ function createPackageFile() {
   .then((data) => JSON.parse(data))
   .then((packageData) => {
     const {
+      name,
       version,
       description,
       peerDependencies,
@@ -49,7 +52,7 @@ function createPackageFile() {
     } = packageData;
 
     const minimalPackage = {
-      name: 'react-components',
+      name,
       version,
       description,
       main: './index.js',

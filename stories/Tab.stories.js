@@ -14,6 +14,7 @@ import docsTabStyled from './_docs/TabStyled.json';
 import Theme from '../src/Theme';
 import TabThemed from '../src/TabThemed';
 import docsTabThemed from './_docs/TabThemed.json';
+import color from 'color';
 
 let titles = ['Aba1', 'Aba2', 'Aba3'];
 let content = [<div>Conteudo da Aba1</div>, <div>Conteudo da Aba2</div>, <div>Conteudo da Aba3</div>];
@@ -59,6 +60,17 @@ storiesOf('Componentes', module)
       <TabThemed titles={titles} content={content} />
     </Theme>`}>
         <Theme theme={{primaryColor: 'green'}}>
+          <TabThemed titles={titles} content={content} />
+        </Theme>
+      </UseCase>
+      <UseCase title="Tema Amarelo Claro" description={`    
+    let titles = ['Aba1', 'Aba2', 'Aba3'];
+    let content = [<div>Conteudo da Aba1</div>, <div>Conteudo da Aba2</div>, <div>Conteudo da Aba3</div>];
+
+    <Theme theme={{primaryColor: 'light-yellow'}}>
+      <TabThemed titles={titles} content={content} />
+    </Theme>`}>
+        <Theme theme={{primaryColor: '#ffffb3'}}>
           <TabThemed titles={titles} content={content} />
         </Theme>
       </UseCase>
