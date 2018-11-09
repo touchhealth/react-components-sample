@@ -85,7 +85,6 @@ export default class TabThemed extends Component {
         let titlesBar = (
             <div className={classes.titleBarContainer}>
                 {titles.map((title, idx) => {
-                    console.log(idx == tabSelectedIdx);
                     return <div className={(idx == tabSelectedIdx ? classes.titleBarItemSelected : "") + " " + classes.titleBarItem} 
                         onClick={this.selectTab.bind(this, idx)} >{title}</div>
                 })}

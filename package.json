@@ -6,15 +6,15 @@
   "private": true,
   "peerDependencies": {
     "react": "^16.6.0",
-    "react-dom": "^16.6.0"
+    "react-dom": "^16.6.0",
+    "react-jss": "^8.6.1"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "color": "^3.1.0",
     "material-ui": "^0.20.2",
     "prop-types": "^15.6.2",
-    "react-bootstrap": "^0.32.4",
-    "react-jss": "^8.6.1"
+    "react-bootstrap": "^0.32.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
