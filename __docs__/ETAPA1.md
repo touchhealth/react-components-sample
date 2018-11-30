@@ -2,7 +2,13 @@
 
 [Voltar](../README.md)
 
-## 1. Setup do projeto
+## 1. Setup rápido
+
+~~~
+npx @touchhealth/create-react-lib react-components
+~~~
+
+## 1. Setup do projeto Detalhado
 
 Iniciar um projeto novo em React ainda é desafio constante para muitos desenvolvedores, iniciantes ou não. São necessárias muitas etapas de configuração para ter um ambiente completo, adequado para o desenvolvimento de uma biblioteca de componentes.
 
